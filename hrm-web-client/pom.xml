@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>hrm</artifactId>
+        <groupId>net.entrofi.hrm</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>web-client</artifactId>
+    <packaging>war</packaging>
+    <build>
+        <!-- 		<resources> -->
+        <!-- 			<resource> -->
+        <!-- 				<directory>src/main/webapp</directory> -->
+        <!-- 				<filtering>true</filtering> -->
+        <!-- 			</resource> -->
+        <!-- 		</resources> -->
+        <!-- 		<plugins>  -->
+        <!-- 			<plugin> -->
+        <!-- 				<groupId>com.github.searls</groupId> -->
+        <!-- 				<artifactId>jasmine-maven-plugin</artifactId> -->
+        <!-- 				<version>1.0.1-beta-6</version> -->
+        <!-- 				<executions> -->
+        <!-- 					<execution> -->
+        <!-- 						<goals> -->
+        <!-- 							<goal>generateManualRunner</goal> -->
+        <!-- 							<goal>resources</goal> -->
+        <!-- 							<goal>testResources</goal> -->
+        <!-- 							<goal>test</goal> -->
+        <!-- 							<goal>preparePackage</goal> -->
+        <!-- 						</goals> -->
+        <!-- 					</execution> -->
+        <!-- 				</executions> -->
+        <!-- 				<configuration> -->
+        <!-- 					<jsSrcDir>src/main/webapp</jsSrcDir> -->
+        <!-- 					<jsTestSrcDir>src/test/</jsTestSrcDir> -->
+        <!-- 				</configuration> -->
+        <!-- 			</plugin> -->
+
+        <!-- 			<plugin> -->
+        <!-- 				<groupId>net.alchim31.maven</groupId> -->
+        <!-- 				<artifactId>yuicompressor-maven-plugin</artifactId> -->
+        <!-- 				<version>1.1</version> -->
+        <!-- 				<executions> -->
+        <!-- 					<execution> -->
+        <!-- 						<id>compress-js</id> -->
+        <!-- 						<goals> -->
+        <!-- 							<goal>compress</goal> -->
+        <!-- 						</goals> -->
+        <!-- 					</execution> -->
+        <!-- 				</executions> -->
+        <!-- 			</plugin> -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>gr.abiss.mvn.plugins</groupId>
+                <artifactId>maven-jstools-plugin</artifactId>
+                <version>0.7</version>
+                <configuration>
+                    <jsDir>src/main/webapp</jsDir>
+                    <includePrivate>true</includePrivate>
+                    <includeUndocumented>true</includeUndocumented>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>jslint</report>
+                            <report>jsdoc</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

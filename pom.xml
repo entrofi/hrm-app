@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.entrofi.hrm</groupId>
+  <artifactId>hrm</artifactId>
+  <packaging>pom</packaging>   
+  <version>0.0.1-SNAPSHOT</version>
+  <name>HRM</name>
+
+  <description>
+    Core suite POM for the HRM of module of the HRM application
+  </description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <hrm.versio>${project.version}</hrm.versio>
+    <apt-maven-plugin.version>1.0.8</apt-maven-plugin.version>
+    <working.dir>${project.basedir}</working.dir>
+  </properties>
+
+  <modules>
+    <module>bom</module>
+    <module>hrm-data</module>
+    <module>hrm-service</module>
+    <module>hrm-rest-facade</module>
+    <module>hrm-web-client</module>
+  </modules>
+
+  <dependencies>
+  </dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+	<plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-compiler-plugin</artifactId>
+	  <configuration>
+	    <source>1.7</source>
+	    <target>1.7</target>
+	  </configuration>
+	</plugin>
+	<plugin>
+	  <groupId>com.mysema.maven</groupId>
+	  <artifactId>apt-maven-plugin</artifactId>
+	  <version>${apt-maven-plugin.version}</version>
+	  <configuration>
+	    <processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
+	  </configuration>
+	  <executions>
+	    <execution>
+	      <phase>generate-sources</phase>
+	      <goals>
+		<goal>process</goal>
+	      </goals>
+	      <configuration>
+		<outputDirectory>src/generated-sources/querydsl/java</outputDirectory>
+	      </configuration>
+	    </execution>
+	  </executions>
+	</plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
