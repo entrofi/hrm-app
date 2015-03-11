@@ -2,6 +2,7 @@ package net.entrofi.hrm.test.domain.repository;
 
 import net.entrofi.hrm.domain.entity.User;
 import net.entrofi.hrm.domain.repository.UserRepository;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,6 +25,7 @@ public class UserRepositoryTest {
     @Autowired
     private UserRepository repository;
 
+    @Test
     public void testSave(){
         User user = new User();
         user.setName("Test");
@@ -34,6 +36,5 @@ public class UserRepositoryTest {
         assertNotNull(persistedUser);
         assertTrue(persistedUser.getId() > 0);
     }
-
 
 }
