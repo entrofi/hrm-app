@@ -3,3 +3,6 @@
 /*.iml
 *.iml
 target/
+hrm-web-client/node_modules/
+hrm-web-client/bower_components/
+hrm-web-client/.tmp/
