@@ -3,3 +3,8 @@ target/
 */target/
 */*.iml
 hrm.iml
+hrm-web-client/bower_components/
+hrm-web-client/node_modules/node-sass/node_modules/lodash/fp/concat.js
+hrm-web-client/node_modules/node-sass/node_modules/lodash/fp/cond.js
+hrm-web-client/node_modules/
+hrm-web-client/.tmp/
