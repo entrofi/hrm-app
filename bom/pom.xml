@@ -15,9 +15,9 @@
 		<slf4j-test.version>1.1.0</slf4j-test.version>
 		<log4j.version>1.2.17</log4j.version>
 		<logback.version>1.0.13</logback.version>
-		<org.springframework.version>4.1.1.RELEASE</org.springframework.version>
+		<org.springframework.version>4.2.1.RELEASE</org.springframework.version>
 		<aspectjweaver.version>1.8.2</aspectjweaver.version>
-		<spring-data-jpa.version>1.7.0.RELEASE</spring-data-jpa.version>
+		<spring-data-jpa.version>1.8.0.RELEASE</spring-data-jpa.version>
 		<cglib.version>2.2</cglib.version>
 		<mysql-connector-java.version>5.1.9</mysql-connector-java.version>
 		<hibernate.version>4.3.8.Final</hibernate.version>
@@ -33,10 +33,12 @@
 		<jsr181-api.version>1.0-MR1</jsr181-api.version>
 		<org.apache.cxf.version>2.7.15</org.apache.cxf.version>
 		<jackson.core.version>2.5.1</jackson.core.version>
-		<junit.version>4.11</junit.version>
 		<c3p0.driver>0.9.2</c3p0.driver>
 		<ojdbc6.version>11.2.0.1.0</ojdbc6.version>
 		<mockito.version>1.9.5</mockito.version>
+		<mongo-java-driver.version>3.0.0</mongo-java-driver.version>
+		<spring-data-mongodb.version>1.8.0.RELEASE</spring-data-mongodb.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -188,6 +190,18 @@
 				<groupId>com.oracle</groupId>
 				<artifactId>ojdbc6</artifactId>
 				<version>${ojdbc6.version}</version>
+			</dependency>
+			<!-- mongodb java driver -->
+			<dependency>
+				<groupId>org.mongodb</groupId>
+				<artifactId>mongo-java-driver</artifactId>
+				<version>${mongo-java-driver.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-mongodb</artifactId>
+				<version>${spring-data-mongodb.version}</version>
 			</dependency>
 
 			<!-- ********** Logging ********** -->

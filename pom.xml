@@ -24,7 +24,6 @@
   <modules>
     <module>bom</module>
     <module>hrm-utility</module>
-    <module>hrm-data</module>
     <module>hrm-service</module>
     <module>hrm-rest-facade</module>
     <module>hrm-web-client</module>

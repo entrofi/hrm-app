@@ -8,16 +8,16 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-import static net.entrofi.hrm.rest.resources.EntityCrudResource.UriParams.*;
+import static net.entrofi.hrm.rest.resources.DocumentCrudResource.UriParams.*;
 /**
  * DOC documentation:type_definition Please provide <b><u>detailed</u></b> class definition.
  *
  * @author hcomak
  * @created 08 Mar 2015
  */
-public interface EntityCrudResource<T> {
+public interface DocumentCrudResource<T> {
 
-    public static final class UriParams{
+    final class UriParams{
         public static final String PATH_VERSION_EXPRESSION = "/{version: v([0-9]){1}((.)([0-9]){1,2}){0,1}}";
 
         public static final String PATH_SEGMENT_DELETE = "/delete";

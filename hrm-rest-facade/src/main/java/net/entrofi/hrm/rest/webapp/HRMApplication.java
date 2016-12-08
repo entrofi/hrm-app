@@ -10,15 +10,15 @@ import org.glassfish.jersey.server.ServerProperties;
 import javax.ws.rs.ApplicationPath;
 
 /*******************************************************************************
- * KBMSApplication
+ *
  *
  * DOC documentation:type_definition Please provide <b><u>detailed</u></b> class definition.
- * Sample Start: This class is a part of KBMS application 
+ * Sample Start: This class is a part of HRM application
  * and is responsible of accessing remote machines with the use of different 
  * protocols.
  *
  *
- * @author hcomak
+ * @author Hasan COMAK
  * @created Dec 14, 2014
  * @version Dec 14, 2014
  * @since TODO insert the product line

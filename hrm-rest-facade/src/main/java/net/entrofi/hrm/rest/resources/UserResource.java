@@ -4,7 +4,7 @@
 package net.entrofi.hrm.rest.resources;
 
 
-import net.entrofi.hrm.domain.entity.User;
+import net.entrofi.hrm.domain.model.User;
 import net.entrofi.hrm.domain.repository.UserRepository;
 import net.entrofi.hrm.service.base.PersistenceServiceBase;
 import org.slf4j.Logger;
@@ -23,12 +23,12 @@ import java.net.URI;
 import java.util.List;
 
 /**
- * @author hcomak
+ * @author Hasan Comak
  *
  */
 @Named
 @Path("/users")
-public class UserResource implements EntityCrudResource<User> {
+public class UserResource implements DocumentCrudResource<User> {
 	
 
 	
@@ -36,7 +36,7 @@ public class UserResource implements EntityCrudResource<User> {
 
 	@Inject
 	@Named("userService")
-	private PersistenceServiceBase<User, UserRepository, Long> service;
+	private PersistenceServiceBase<User, UserRepository, String> service;
 	
 	
 	@Context
@@ -82,7 +82,7 @@ public class UserResource implements EntityCrudResource<User> {
 	public Response add(User user){
 		User persistedUser = service.persist(user);
 		
-		URI entityURI = uriInfo.getAbsolutePathBuilder().path(Long.toString(persistedUser.getId())).build();
+		URI entityURI = uriInfo.getAbsolutePathBuilder().path(persistedUser.getId()).build();
 		
 		return Response.status(Status.CREATED).entity(persistedUser).location(entityURI).build();
 	}

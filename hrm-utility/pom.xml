@@ -24,7 +24,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>aero.tav.tams</groupId>
+                <groupId>net.entrofi.hrm</groupId>
                 <version>${project.version}</version>
                 <artifactId>bom</artifactId>
                 <type>pom</type>
