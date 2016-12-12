@@ -8,6 +8,8 @@
         // Features (listed alphabetically)
         'app.approot',
         'app.dashboard',
-        'app.topnav'
+        'app.ideaedit',
+        'app.topnav',
+        'app.useredit'
     ]);
 })();

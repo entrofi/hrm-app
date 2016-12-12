@@ -31,7 +31,6 @@
 
     /* @ngInject */
     function ControllerFunction(logger) {
-
         activate();
 
         function activate() {

@@ -17,8 +17,8 @@
     "bardjs": "~0.1.8"
   },
   "dependencies": {
-    "angular": "~1.4.7",
-    "angular-animate": "~1.4.7",
+    "angular": "~1.5.8",
+    "angular-animate": "~1.5.8",
     "angular-bootstrap": "~0.14.0",
     "angular-sanitize": "~1.4.7",
     "angular-toastr": "~1.5.0",

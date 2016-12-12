@@ -9,13 +9,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" ui-sref="dashboard">Portfolio Manager</a>
+            <a class="navbar-brand" ui-sref="dashboard">Think&Throw</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse" ng-class="!vm.isCollapsed && 'in'">
             <ul class="nav navbar-nav">
                 <li ui-sref-active="active">
                     <a ui-sref="dashboard" ng-click="vm.isCollapsed = !vm.isCollapsed">Dashboard</a>
+                </li>
+
+                <li>
+                    <a ui-sref="idea" ng-click="vm.isCollapsed = !vm.isCollapsed">BrainIt</a>
+                </li>
+                <li>
+                    <a ui-sref="user" ng-click="vm.isCollapsed = !vm.isCollapsed">User</a>
                 </li>
             </ul>
         </div>

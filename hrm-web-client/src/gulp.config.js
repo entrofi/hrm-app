@@ -3,7 +3,7 @@
 'use strict';
 
 var $ = require('gulp-load-plugins')({lazy: true}),
-    src = './src/';
+    src = './web/';
 
 module.exports = {
 

@@ -18,6 +18,16 @@
             .state('dashboard', {
                 url: '/',
                 template: '<tmpl-dashboard></tmpl-dashboard>'
+            })
+            .state('idea', {
+                url: '/idea',
+                template: '<tmpl-ideaedit></tmpl-ideaedit>'
+            })
+            .state('user', {
+                url: '/user',
+                templateUrl: 'components/user/useredit.html',
+                controller: 'UserEditController',
+                controllerAs: 'vm'
             });
     }
 })();

@@ -11,7 +11,7 @@
 
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')({lazy: true}),
-    src = './src/',
+    src = './web/',
     config = require('./gulp.config'),
     buildTask = (function (config, taskFile) {
         require('./gulp-tasks/' + taskFile)(config);

@@ -3,7 +3,7 @@
 
     angular.module('app.core', [
         // Angular modules (ngAnimate 1.4.x is not compatible with ui.bootstrap 0.13.0)
-        /* 'ngAnimate', */ 'ngSanitize',
+         'ngAnimate',  'ngSanitize',
 
         // Our reusable framework
         'fw.exception', 'fw.logger',

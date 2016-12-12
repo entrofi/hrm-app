@@ -1,7 +1,8 @@
 (function() {
     'use strict';
 
-    angular.module('app.dashboard', [
+    var ideaEdit = angular.module('app.ideaedit', [
         'app.core'
     ]);
+
 })();

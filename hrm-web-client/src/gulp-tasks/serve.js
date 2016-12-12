@@ -35,7 +35,7 @@ module.exports = function (config) {
                 routes: isDev ? {
                     '/bower_components': './bower_components',
                     '/fonts': './bower_components/bootstrap-sass/assets/fonts',
-                    '/src': config.sourceDir,
+                    '/web': config.sourceDir,
                     '/images': config.sourceDir + 'images',
                     '/.tmp': config.tempDir
                 } : {},
