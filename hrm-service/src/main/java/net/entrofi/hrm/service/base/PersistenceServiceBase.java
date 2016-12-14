@@ -16,42 +16,40 @@ import java.util.List;
  */
 public interface PersistenceServiceBase<T, K extends CrudRepository<T, ID>, ID extends Serializable> {
     /**
-     *
      * This method should be used for spring repository autowiring which is also
      * the main purpose of the {{@link PersistenceServiceBase} interface
      *
-     * @see  TODO add abstraction link
-     * @param repository
-     *            the repository instance to be injected which should be child
-     *            class of
-     *            <code> org.springframework.data.repository.CrudRepository</code>
+     * @param repository the repository instance to be injected which should be child
+     *                   class of
+     *                   <code> org.springframework.data.repository.CrudRepository</code>
+     * @see TODO add abstraction link
      */
-     void setRepository(K repository);
+    void setRepository(K repository);
 
-     List<T> findAll();
+    List<T> findAll();
 
-     List<T> findByIdIn(List<ID> idList);
+    List<T> findByIdIn(List<ID> idList);
 
-     Page<T> findAll(Pageable pageable);
+    Page<T> findAll(Pageable pageable);
 
-     List<T> findAll(Sort sort);
+    List<T> findAll(Sort sort);
 
-     Page<T> findAll(int limit, int offset, String sort);
+    Page<T> findAll(int limit, int offset, String sort);
 
-     Page<T> findAll(int limit, int offset, Sort sort);
+    Page<T> findAll(int limit, int offset, Sort sort);
 
-     T find(ID id);
+    T find(ID id);
 
-     T persist(T entity);
+    T persist(T entity);
 
-     List<T> persist(Iterable<T> iterable);
+    List<T> persist(Iterable<T> iterable);
 
-     void delete(T entity);
+    void delete(T entity);
 
-     void delete(ID id);
+    void delete(ID id);
 
-     void delete(Iterable<? extends T> entities);
+    void delete(Iterable<? extends T> entities);
 
-     long count();
+    long count();
 
 }

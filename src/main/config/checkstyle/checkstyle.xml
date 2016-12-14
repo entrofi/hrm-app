@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+
+    <!--Checkstyle for Monitise MEA-->
+
+    <module name="FileLength">
+        <property name="max" value="1000"/>
+    </module>
+
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+
+    <!--<module name="Header">-->
+        <!--<property name="header"-->
+                  <!--value="/*\n * Copyright 2003-2016 Monitise Group Limited. All Rights Reserved.\n *\n * Save to the extent permitted by law, you may not use, copy, modify,\n * distribute or create derivative works of this material or any part\n * of it without the prior written consent of Monitise Group Limited.\n * Any reproduction of this material must contain this notice.\n */"/>-->
+        <!--<property name="fileExtensions" value="java"/>-->
+    <!--</module>-->
+
+    <module name="NewlineAtEndOfFile"/>
+
+    <module name="UniqueProperties">
+        <property name="fileExtensions" value="properties" />
+    </module>
+
+    <module name="Translation"/>
+
+    <!-- =========================================================================== -->
+    <!-- =========================================================================== -->
+    <!--                   TREEWALKER BEGINS HERE                                    -->
+    <!-- =========================================================================== -->
+    <!-- =========================================================================== -->
+    <module name="TreeWalker">
+
+        <module name="AbstractClassName">
+            <property name="severity" value="warning"/>
+            <property name="ignoreModifier" value="true"/>
+        </module>
+
+        <module name="AnonInnerLength">
+            <property name="max" value="20"/>
+        </module>
+
+        <module name="ArrayTypeStyle"/>
+
+        <module name="AvoidNestedBlocks"/>
+
+        <module name="AvoidStarImport"/>
+
+        <module name="AvoidStaticImport">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="BooleanExpressionComplexity"/>
+
+        <module name="ClassDataAbstractionCoupling"/>
+
+        <module name="ClassFanOutComplexity">
+            <property name="max" value="50"/>
+        </module>
+
+        <module name="ClassTypeParameterName"/>
+
+        <module name="ConstantName"/>
+
+        <module name="CovariantEquals"/>
+
+        <module name="CyclomaticComplexity">
+            <property name="max" value="7"/>
+        </module>
+
+        <module name="DeclarationOrder"/>
+
+        <module name="DefaultComesLast"/>
+
+        <module name="DesignForExtension">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="EmptyBlock"/>
+
+        <module name="EmptyForInitializerPad"/>
+
+        <module name="EmptyForIteratorPad"/>
+
+        <module name="EmptyStatement"/>
+
+        <module name="EqualsAvoidNull"/>
+
+        <module name="EqualsHashCode"/>
+
+        <module name="ExecutableStatementCount">
+            <property name="max" value="50"/>
+        </module>
+
+        <module name="FallThrough"/>
+
+        <module name="FinalClass"/>
+
+        <module name="FinalLocalVariable">
+            <property name="tokens" value="VARIABLE_DEF,PARAMETER_DEF"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!--<module name="FinalParameters">-->
+            <!--<property name="ignorePrimitiveTypes" value="true"/>-->
+        <!--</module>-->
+
+        <module name="GenericWhitespace"/>
+
+        <module name="HiddenField">
+            <property name="ignoreConstructorParameter" value="true"/>
+            <property name="ignoreSetter" value="true"/>
+        </module>
+
+        <module name="HideUtilityClassConstructor"/>
+
+        <module name="IllegalCatch">
+            <property name="illegalClassNames" value="java.lang.Error, java.lang.Throwable, java.lang.RuntimeException"/>
+        </module>
+
+        <module name="IllegalImport">
+            <property name="illegalPkgs" value="sun"/>
+        </module>
+
+        <module name="IllegalInstantiation">
+            <property name="classes" value="java.lang.Boolean"/>
+        </module>
+
+        <module name="IllegalThrows"/>
+
+        <module name="IllegalType">
+            <property name="memberModifiers" value="LITERAL_PUBLIC, LITERAL_PROTECTED, LITERAL_STATIC"/>
+            <property name="ignoredMethodNames" value="getInstance"/>
+            <property name="illegalClassNames" value="java.lang.Boolean, java.lang.Integer, java.lang.Double, java.lang.Float, java.lang.Character, java.lang.Long, java.lang.Short, java.lang.Byte, java.util.GregorianCalendar, java.util.Hashtable, java.util.HashSet, java.util.HashMap, java.util.ArrayList, java.util.LinkedList, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.TreeSet, java.util.TreeMap, java.util.Vector"/>
+        </module>
+
+        <module name="Indentation"/>
+
+        <module name="InnerAssignment"/>
+
+        <module name="InnerTypeLast"/>
+
+        <module name="JavaNCSS">
+            <property name="methodMaximum" value="150"/>
+            <property name="classMaximum" value="1000"/>
+            <property name="fileMaximum" value="1000"/>
+        </module>
+
+        <module name="LeftCurly">
+            <property name="option" value="eol"/>
+            <property name="maxLineLength" value="120"/>
+        </module>
+
+        <module name="LineLength">
+            <property name="max" value="120"/>
+            <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
+        </module>
+
+        <module name="LocalFinalVariableName"/>
+
+        <module name="LocalVariableName">
+            <property name="allowOneCharVarInForLoop" value="true"/>
+        </module>
+
+        <module name="MagicNumber">
+            <property name="ignoreHashCodeMethod" value="true"/>
+            <property name="ignoreFieldDeclaration" value="true"/>
+        </module>
+
+        <module name="MemberName">
+            <!--
+            First group bans keywords such as "id" or "description". More can be defined using | separator.
+            Second group defines prefixes causing problems in iOS, such as "new".
+            Both checks are case-insensitive.
+            Third and last group is same as the default format.
+            -->
+            <!--<property name="format" value="^((?i)(?!(id|description)$))((?i)(?!new))[a-z][a-zA-Z0-9]*$" />-->
+        </module>
+
+        <module name="MethodCount">
+            <property name="maxTotal" value="40"/>
+        </module>
+
+        <module name="MethodLength"/>
+
+        <module name="MethodName"/>
+
+        <module name="MethodParamPad"/>
+
+        <module name="MethodTypeParameterName"/>
+
+        <module name="MissingSwitchDefault"/>
+
+        <module name="ModifiedControlVariable"/>
+
+        <module name="ModifierOrder"/>
+
+        <module name="MultipleStringLiterals"/>
+
+        <module name="MultipleVariableDeclarations"/>
+
+        <module name="MutableException"/>
+
+        <module name="NPathComplexity"/>
+
+        <module name="NeedBraces"/>
+
+        <module name="NestedForDepth">
+            <property name="max" value="2"/>
+        </module>
+
+        <module name="NestedIfDepth">
+            <property name="max" value="2"/>
+        </module>
+
+        <module name="NestedTryDepth"/>
+
+        <module name="NoClone"/>
+
+        <module name="NoFinalizer"/>
+
+        <module name="NoWhitespaceAfter"/>
+
+        <module name="NoWhitespaceBefore"/>
+
+        <module name="OneStatementPerLine"/>
+
+        <module name="OperatorWrap"/>
+
+        <module name="OuterTypeFilename"/>
+
+        <module name="OuterTypeNumber"/>
+
+        <module name="PackageName"/>
+
+        <!--<module name="ParameterAssignment"/>-->
+
+        <module name="ParameterName"/>
+
+        <module name="ParameterNumber">
+            <property name="max" value="7"/>
+            <property name="tokens" value="METHOD_DEF, CTOR_DEF"/>
+        </module>
+
+        <module name="ParenPad"/>
+
+        <module name="RedundantImport"/>
+
+        <module name="RedundantModifier"/>
+
+        <module name="ReturnCount">
+            <property name="max" value="4"/>
+        </module>
+
+        <module name="RightCurly">
+            <property name="option" value="same"/>
+        </module>
+
+        <module name="SimplifyBooleanExpression"/>
+
+        <module name="SimplifyBooleanReturn"/>
+
+        <module name="StaticVariableName"/>
+
+        <module name="StringLiteralEquality"/>
+
+        <module name="SuperClone"/>
+
+        <module name="SuperFinalize"/>
+
+        <module name="TypeName"/>
+
+        <module name="TypecastParenPad"/>
+
+        <module name="UnnecessaryParentheses"/>
+
+        <module name="UnusedImports"/>
+
+        <module name="UpperEll"/>
+
+        <module name="VisibilityModifier"/>
+
+        <module name="WhitespaceAfter"/>
+
+        <module name="WhitespaceAround"/>
+
+    </module>
+
+</module>

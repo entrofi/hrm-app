@@ -25,10 +25,10 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
-     public User update(User user){
-         userRepository.save(user);
-         return user;
-     }
+    public User update(User user) {
+        userRepository.save(user);
+        return user;
+    }
 
     @Override
     public void delete(String id) {
