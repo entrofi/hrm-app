@@ -3,7 +3,7 @@ package net.entrofi.hrm.service.base;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.CrudRepository;
+
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,44 +14,32 @@ import java.util.List;
  * @author hcomak
  * @created 09 Mar 2015
  */
-public interface PersistenceServiceBase<T, K extends CrudRepository<T, ID>, ID extends Serializable> {
-    /**
-     *
-     * This method should be used for spring repository autowiring which is also
-     * the main purpose of the {{@link PersistenceServiceBase} interface
-     *
-     * @see  TODO add abstraction link
-     * @param repository
-     *            the repository instance to be injected which should be child
-     *            class of
-     *            <code> org.springframework.data.repository.CrudRepository</code>
-     */
-     void setRepository(K repository);
+public interface PersistenceServiceBase<T, ID extends Serializable> {
 
-     List<T> findAll();
+    List<T> findAll();
 
-     List<T> findByIdIn(List<ID> idList);
+    List<T> findByIdIn(final List<ID> idList);
 
-     Page<T> findAll(Pageable pageable);
+    Page<T> findAll(final Pageable pageable);
 
-     List<T> findAll(Sort sort);
+    List<T> findAll(final Sort sort);
 
-     Page<T> findAll(int limit, int offset, String sort);
+    Page<T> findAll(final int limit, final int offset, final String sort);
 
-     Page<T> findAll(int limit, int offset, Sort sort);
+    Page<T> findAll(final int limit, final int offset, final Sort sort);
 
-     T find(ID id);
+    T find(final ID id);
 
-     T persist(T entity);
+    T save(final T entity);
 
-     List<T> persist(Iterable<T> iterable);
+    List<T> save(final Iterable<T> iterable);
 
-     void delete(T entity);
+    void delete(final T entity);
 
-     void delete(ID id);
+    void delete(final ID id);
 
-     void delete(Iterable<? extends T> entities);
+    void delete(final Iterable<? extends T> entities);
 
-     long count();
+    long count();
 
 }

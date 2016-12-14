@@ -6,3 +6,5 @@ target/
 hrm-web-client/node_modules/
 hrm-web-client/bower_components/
 hrm-web-client/.tmp/
+hrm-web-client/src/.tmp/
+hrm-web-client/src/bower_components/

@@ -15,6 +15,24 @@
     <properties>
         <working.dir>${project.basedir}</working.dir>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/</path>
+                    <port>8080</port>
+                    <contextReloadable>true</contextReloadable>
+                    <!--<contextFile>src/main/webapp/META-INF/context.xml</contextFile>-->
+                </configuration>
+                <dependencies>
+
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -50,7 +68,7 @@
 
         <!-- javax: XML binding -->
         <dependency>
-            <groupId>javax.xml</groupId>
+            <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
         </dependency>
         <dependency>
@@ -85,10 +103,6 @@
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-moxy</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-multipart</artifactId>
         </dependency>
         <!-- Test Artifacts -->
@@ -101,6 +115,11 @@
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
             <artifactId>jersey-test-framework-provider-grizzly2</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-mrbean</artifactId>
+            <version>2.4.0</version>
+        </dependency>
         <!-- Logging with SLF4J & LogBack -->
         <dependency>
             <groupId>org.slf4j</groupId>

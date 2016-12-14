@@ -1,8 +1,8 @@
-/** 
- *	$Id$
- *
+/**
+ * $Id$
+ * <p>
  * <p>Copyright (c) 2014</p>
- * 
+ * <p>
  * <b>Latest revision summary:</b><br/>
  * $LastChangedBy$<br/>
  * $LastChangedRevision$<br/>
@@ -17,7 +17,7 @@ import java.io.Serializable;
 
 /**
  * User<br/>
- * 
+ *
  * TODO Please document the type definition<br/>
  *
  * <p>In order to see the history of changes, please see the header on package
@@ -30,27 +30,27 @@ import java.io.Serializable;
  * @modified $LastChangedDate$
  */
 @Document
-public class User implements Serializable{
+public class User implements Serializable {
 
-	
-	private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 1L;
 
     @Id
-	private String id;
+    private String id;
 
-	private String username;
+    private String username;
 
-	private String password;
-	
-	private String salt;
+    private String password;
 
-	private String email;
-	
+    private String salt;
 
-	private String name;
-	
+    private String email;
 
-	private String lastName;
+
+    private String name;
+
+
+    private String lastName;
 
 
     public String getId() {

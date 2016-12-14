@@ -1,12 +1,25 @@
-[{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser", "email" : "dummy.user@mail.com", "name" : "Dummy", "lastName" : "User" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser1", "email" : "dummy.user1@mail.com", "name" : "Dummy1", "lastName" : "User1" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser2", "email" : "dummy.user2@mail.com", "name" : "Dummy2", "lastName" : "User2" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser3", "email" : "dummy.user3@mail.com", "name" : "Dummy3", "lastName" : "User3" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser4", "email" : "dummy.user4@mail.com", "name" : "Dummy4", "lastName" : "User4" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser5", "email" : "dummy.user5@mail.com", "name" : "Dummy5", "lastName" : "User5" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser6", "email" : "dummy.user6@mail.com", "name" : "Dummy6", "lastName" : "User6" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser7", "email" : "dummy.user7@mail.com", "name" : "Dummy7", "lastName" : "User7" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser8", "email" : "dummy.user8@mail.com", "name" : "Dummy8", "lastName" : "User8" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser9", "email" : "dummy.user9@mail.com", "name" : "Dummy9", "lastName" : "User9" },
-{ "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "User10" }]
+[
+{ "_id" :{"$oid" : "58550ff12569613e10a2449d"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser", "email" : "dummy.user@mail.com", "name" : "Dummy", "lastName" : "User" },
+{ "_id" :{"$oid" : "58550ff12569613e10a2449e"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser1", "email" : "dummy.user1@mail.com", "name" : "Dummy1", "lastName" : "User1" },
+{ "_id" :{"$oid" : "58550ff12569613e10a2449f"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser2", "email" : "dummy.user2@mail.com", "name" : "Dummy2", "lastName" : "User2" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a0"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser3", "email" : "dummy.user3@mail.com", "name" : "Dummy3", "lastName" : "User3" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a1"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser4", "email" : "dummy.user4@mail.com", "name" : "Dummy4", "lastName" : "User4" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a2"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser5", "email" : "dummy.user5@mail.com", "name" : "Dummy5", "lastName" : "User5" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a3"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser6", "email" : "dummy.user6@mail.com", "name" : "Dummy6", "lastName" : "User6" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a4"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser7", "email" : "dummy.user7@mail.com", "name" : "Dummy7", "lastName" : "User7" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a5"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser8", "email" : "dummy.user8@mail.com", "name" : "Dummy8", "lastName" : "User8" },
+{ "_id" :{"$oid" : "58550ff12569613e10a244a6"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser9", "email" : "dummy.user9@mail.com", "name" : "Dummy9", "lastName" : "User9" },
+
+
+  { "_id" : {"$oid" : "5855600425696132846dce10"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete__id_User10" },
+  { "_id" : {"$oid" : "5855600425696132846dce11"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete_doc_User10" },
+
+  { "_id" : {"$oid" : "5855600425696132846dce12"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete_list_user10" },
+  { "_id" : {"$oid" : "5855600425696132846dce13"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete_list_user10" },
+  { "_id" : {"$oid" : "5855600425696132846dce14"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete_list_user10" },
+  { "_id" : {"$oid" : "5855600425696132846dce15"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete_list_user10" },
+  { "_id" : {"$oid" : "5855600425696132846dce16"}, "_class" : "net.entrofi.hrm.domain.model.User", "username" : "dummyuser10", "email" : "dummy.user10@mail.com", "name" : "Dummy10", "lastName" : "Delete_list_user10" }
+
+
+]
 
