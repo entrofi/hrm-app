@@ -15,6 +15,24 @@
     <properties>
         <working.dir>${project.basedir}</working.dir>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/hrm-app</path>
+                    <port>8080</port>
+                    <contextReloadable>true</contextReloadable>
+                    <contextFile>src/main/webapp/META-INF/context.xml</contextFile>
+                </configuration>
+                <dependencies>
+
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
     <dependencyManagement>
         <dependencies>
             <dependency>

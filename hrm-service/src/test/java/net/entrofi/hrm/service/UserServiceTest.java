@@ -1,6 +1,7 @@
 package net.entrofi.hrm.service;
 
 import net.entrofi.hrm.domain.model.User;
+import net.entrofi.hrm.service.base.PersistenceServiceBase;
 import net.entrofi.hrm.service.domain.UserService;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNull;
 import static junit.framework.TestCase.assertTrue;
 import static junit.framework.TestCase.fail;
 
@@ -29,7 +32,9 @@ public class UserServiceTest extends AbstractServiceTest {
 
     @Test
     public void testFind(){
-        fail("not implemented yet.");
+        List<User> allUsers = userService.findAll();
+        User user = userService.find(allUsers.get(0).getId());
+        assertEquals("Found user is not the correct one", allUsers.get(0).getId(), user.getId());
     }
 
     @Test
@@ -68,7 +73,10 @@ public class UserServiceTest extends AbstractServiceTest {
 
     @Test
     public void testDelete(){
-        fail("not implemented yet.");
+        String userId = userService.findAll().get(0).getId();
+        userService.delete(userId);
+        User user = userService.find(userId);
+        assertNull(user);
     }
 
 
