@@ -23,9 +23,9 @@
 		<hibernate.version>4.3.8.Final</hibernate.version>
 		<hibernate-validator.version>4.3.1.Final</hibernate-validator.version>
 		<querydsl.version>3.5.0</querydsl.version>
-		<org.glassfish.jersey.version>2.14</org.glassfish.jersey.version>
+		<org.glassfish.jersey.version>2.25</org.glassfish.jersey.version>
 		<com.sun.org.glassfish.jersey.version>1.18.3</com.sun.org.glassfish.jersey.version>
-		<jersey-test-framework.version>2.14</jersey-test-framework.version>
+		<jersey-test-framework.version>2.25</jersey-test-framework.version>
 		<javax.validation-api.version>1.1.0.Final</javax.validation-api.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<h2.version>1.4.185</h2.version>

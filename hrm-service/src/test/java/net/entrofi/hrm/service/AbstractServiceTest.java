@@ -33,7 +33,7 @@ import static junit.framework.TestCase.fail;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class, classes = {ServiceTestsApplicationConfig.class})
-public class AbstractServiceTest {
+public abstract class AbstractServiceTest {
 
 
     @Autowired

@@ -10,26 +10,23 @@ import org.glassfish.jersey.server.ServerProperties;
 import javax.ws.rs.ApplicationPath;
 
 /*******************************************************************************
- *
- *
  * DOC documentation:type_definition Please provide <b><u>detailed</u></b> class definition.
  * Sample Start: This class is a part of HRM application
- * and is responsible of accessing remote machines with the use of different 
+ * and is responsible of accessing remote machines with the use of different
  * protocols.
  *
- *
  * @author Hasan COMAK
- * @created Dec 14, 2014
  * @version Dec 14, 2014
- * @since TODO insert the product line
+ * @created Dec 14, 2014
  * @see <Add inherited classes>
+ * @since TODO insert the product line
  ******************************************************************************/
 @ApplicationPath("/")
 public class HRMApplication extends ResourceConfig {
 
-    private final static java.util.logging.Logger LOG = java.util.logging.Logger.getGlobal();
+    private static final java.util.logging.Logger LOG = java.util.logging.Logger.getGlobal();
 
-    public HRMApplication(){
+    public HRMApplication() {
         register(JacksonFeature.class);
         register(MultiPartFeature.class);
 
@@ -50,7 +47,7 @@ public class HRMApplication extends ResourceConfig {
 
         String[] packages = {"net.entrofi.hrm.rest.resources", "net.entrofi.hrm.rest.webapp"};
         property(ServerProperties.PROVIDER_PACKAGES, packages);
-        packages(true,packages);
+        packages(true, packages);
 
     }
 }

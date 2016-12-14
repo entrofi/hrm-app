@@ -1,24 +1,10 @@
 package net.entrofi.hrm.service.domain;
 
 
-
 import net.entrofi.hrm.domain.model.User;
+import net.entrofi.hrm.service.base.PersistenceServiceBase;
 
-import java.util.List;
+public interface UserService extends PersistenceServiceBase<User, String> {
 
-public interface UserService {
-
-
-    User save(User user);
-
-    User update(User user);
-
-    void delete(User user);
-
-    void delete(String id);
-
-    User find(String id);
-
-    List<User> findAll();
 
 }
