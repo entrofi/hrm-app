@@ -10,6 +10,7 @@
         'app.dashboard',
         'app.ideaedit',
         'app.topnav',
-        'app.useredit'
+        'app.useredit',
+        'app.userList'
     ]);
 })();
