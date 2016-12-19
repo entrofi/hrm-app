@@ -1,3 +1,5 @@
+@import "../../components/topnav/topnav";
+
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
     padding-top: 50px;
@@ -10,3 +12,5 @@ body {
 
 /* Workaround for unwanted route changes due to empty href attributes - see http://angular-ui.github.io/bootstrap/ */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+

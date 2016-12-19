@@ -32,6 +32,9 @@
     function ControllerFunction() {
         var vm = this;
         vm.isCollapsed = true;
+
+        vm.userMenuItems = [{uiSref: "user", text: "Add User"},
+            {uiSref: "userList", text: "User List"}];
     }
 
 })();
