@@ -1,29 +1,31 @@
 {
-  "name": "angular-template",
-  "version": "0.1.0",
-  "description": "Gulp Supported Angular Template",
-  "author": "Hasan Comak",
-  "license": "MIT",
-  "homepage": "https://github.com/entrofi/hrm-app",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "devDependencies": {
-    "angular-mocks": "~1.4.7",
-    "bardjs": "~0.1.8"
-  },
-  "dependencies": {
-    "angular": "~1.5.8",
-    "angular-animate": "~1.5.8",
-    "angular-bootstrap": "~0.14.0",
-    "angular-sanitize": "~1.4.7",
-    "angular-toastr": "~1.5.0",
-    "angular-ui-router": "~0.2.15",
-    "bootstrap-sass": "~3.3.4",
-    "lodash": "~3.10.1"
-  }
+    "name": "angular-template",
+    "version": "0.1.0",
+    "description": "Gulp Supported Angular Template",
+    "author": "Hasan Comak",
+    "license": "MIT",
+    "homepage": "https://github.com/entrofi/hrm-app",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "angular-mocks": "~1.4.7",
+        "bardjs": "~0.1.8"
+    },
+    "dependencies": {
+        "angular": "~1.5.8",
+        "angular-animate": "~1.5.8",
+        "angular-bootstrap": "~0.14.0",
+        "angular-sanitize": "~1.4.7",
+        "angular-toastr": "~1.5.0",
+        "angular-touch": "~1.5.8",
+        "angular-ui-router": "~0.2.15",
+        "angular-ui-grid": "~4.0.1",
+        "bootstrap-sass": "~3.3.4",
+        "lodash": "~3.10.1"
+    }
 }

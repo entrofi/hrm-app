@@ -10,6 +10,6 @@
         'app.dashboard',
         'app.ideaedit',
         'app.topnav',
-        'app.useredit'
+        'app.user'
     ]);
 })();

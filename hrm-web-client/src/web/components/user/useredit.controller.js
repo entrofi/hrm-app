@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var appUserEdit = angular.module('app.useredit');
+    var appUserModule = angular.module('app.user');
 
     function UserEditController(logger) {
         var vm = this;
@@ -26,6 +26,6 @@
     }
 
     UserEditController.$inject = ['logger'];
-    appUserEdit.controller('UserEditController', UserEditController);
+    appUserModule.controller('UserEditController', UserEditController);
 
 })();

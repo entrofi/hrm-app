@@ -1,0 +1,31 @@
+.navbar-nav {
+    > li > span {
+        padding-top:    $navbar-padding-vertical;
+        padding-bottom: $navbar-padding-vertical;
+        display: inline-block;
+    }
+    > li > span > a {
+        color: $navbar-inverse-link-color;
+        &:hover,
+        &:focus {
+            color: $navbar-inverse-link-hover-color;
+            background-color: $navbar-inverse-link-hover-bg;
+        }
+    }
+    > span > .active > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $navbar-inverse-link-active-color;
+            background-color: $navbar-inverse-link-active-bg;
+        }
+    }
+    > span > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $navbar-inverse-link-disabled-color;
+            background-color: $navbar-inverse-link-disabled-bg;
+        }
+    }
+}

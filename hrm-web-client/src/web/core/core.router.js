@@ -28,6 +28,12 @@
                 templateUrl: 'components/user/useredit.html',
                 controller: 'UserEditController',
                 controllerAs: 'vm'
+            })
+            .state('userList', {
+                url: '/user/list',
+                templateUrl: 'components/user/userlist.html',
+                controller: 'UserListController',
+                controllerAs: 'vm'
             });
     }
 })();
