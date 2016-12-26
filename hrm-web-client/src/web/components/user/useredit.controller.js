@@ -3,29 +3,65 @@
 
     var appUserModule = angular.module('app.user');
 
-    function UserEditController(logger) {
+    function UserEditController($scope, logger, userService, $stateParams) {
         var vm = this;
         vm.user = {};
 
         activate();
 
 
+
         function activate() {
-            return getUser().then(function () {
+            var userId = $stateParams.id
+
+            return getUser(userId).then(function () {
                 logger.info("Activated user edit view");
             })
         }
 
-        function getUser() {
-            var userPromise = new Promise(function(resolve, rejedct) {
-                vm.user = {name: 'Hasan', surname: 'comak', username: 'hasancomak', email: 'hasan.comak@monitise.com'};
-               resolve(vm.user);
-            });
+        function getUser(id) {
+           var userPromise = new Promise(function then(){}, function(){} );
+            if(id !== "") {
+               userPromise = userService.getItem(id).then(
+                    function (payload) {
+                        vm.user = payload;
+                        logger.info('Loaded user: ' + vm.user.name );
+                        logger.debug('Loaded edit payload:' + payload)
+                    },
+                    function (errorPayload) {
+                        logger.error("Unable to find user with id: " + id);
+                    }
+                )
+            }
+
             return userPromise;
         }
-    }
 
-    UserEditController.$inject = ['logger'];
+        function saveUser() {
+            return userService.save(vm.user)
+                .then(function(payload) {
+                    vm.user = payload;
+                    logger.info("User saved successfully");
+                }),
+                function(errorPayload) {
+                    logger.warn("Unable to save user");
+                }
+        }
+
+        $scope.saveUser = function() {
+            return userService.save(vm.user)
+                .then(function (payload) {
+                    vm.user = payload;
+                    logger.info("User saved successfully");
+                }),
+                function (errorPayload) {
+                    logger.warn("Unable to save user");
+                }
+        };
+    }//End controller
+
+
+    UserEditController.$inject = ['$scope', 'logger', 'userService', '$stateParams'];
     appUserModule.controller('UserEditController', UserEditController);
 
 })();

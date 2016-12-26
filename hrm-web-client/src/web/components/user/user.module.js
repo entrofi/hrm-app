@@ -3,17 +3,16 @@
     angular.module('app.user', [ 'app.core', 'ngTouch', 'ui.grid'])
         .factory('userService', ["$http", "$q", "logger", function ($http, $q, logger) {
             var host = "http://localhost:8080/rest";
-            var resourceRoot = "/users";
-            var deferred = $q.defer();
-            var errorHandler = function (msg, code) {
-                deferred.reject(msg);
-                logger.error(msg, code);
-            };
+            var resourcePath = "/users";
+            var resourceURI = host + resourcePath;
+
             return {
                 getItem: function (id) {
-                    $http.get(host + resourceRoot + "/item-" + id)
+                    var deferred = $q.defer();
+                    $http.get(resourceURI + "/item-" + id)
                         .success(function (data) {
                             deferred.resolve(data);
+                            deferred.notify(data);
                         }).error(function (msg, code) {
                             deferred.reject(msg);
                             logger.error(msg, code);
@@ -21,13 +20,26 @@
                     return deferred.promise;
                 },
                 getList: function (queryParams) {
-                    $http.get(host + resourceRoot + "/list/")
+                    var deferred = $q.defer();
+                    $http.get(resourceURI + "/list/")
                         .success(function (data) {
                             deferred.resolve(data);
+                            deferred.notify(data);
                         }).error(function (msg, code) {
                             deferred.reject(msg);
                             logger.error(msg, code);
                     });
+                    return deferred.promise;
+                },
+                save: function (entity) {
+                    var deferred = $q.defer();
+                    $http.post(resourceURI, entity)
+                        .success(function(data) {
+                            deferred.resolve(data);
+                        }).error(function(msg, code) {
+                            deferred.reject(msg);
+                            logger.error(msg, code);
+                        })
                     return deferred.promise;
                 }
 

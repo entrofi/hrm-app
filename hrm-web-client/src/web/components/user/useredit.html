@@ -1,19 +1,21 @@
 <section id="useredit-view" class="container-fluid">
 
     <h1>Idea edit</h1>
-
+<form novalidate id="userEditForm" name="userEditForm">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-sm-8">
                 <div class="form-group">
                     <label>Name:</label>
-                    <input type="text" data-ng-model="vm.user.name" class="form-control">
+                    <form-field-validator control-label="Name" control-msg="user.name.format" required-msg="field.required">
+                        <input type="text"name="name" data-ng-model="vm.user.name" class="form-control" required ng-pattern="/^([A-Za-z]{2,})\b/">
+                    </form-field-validator>
                 </div>
             </div>
             <div class="col-md-4 col-sm-8">
                 <div class="form-group">
                     <label>Surname:</label>
-                    <input type="text" data-ng-model="vm.user.surname" class="form-control">
+                    <input type="text" name="surname" data-ng-model="vm.user.lastName" class="form-control">
                 </div>
             </div>
         </div>
@@ -35,26 +37,28 @@
             <div class="col-md-4 col-sm-8">
                 <div class="form-group">
                     <label>password:</label>
-                    <input type="text" ng-model="vm.user.password" class="form-control">
+                    <input type="password" ng-model="vm.user.password" class="form-control">
                 </div>
             </div>
             <div class="col-md-4 col-sm-8">
                 <div class="form-group">
                     <label>confirm password:</label>
-                    <input type="text" ng-model="vm.user.passwordConfirm" class="form-control">
+                    <input type="password" ng-model="vm.user.passwordConfirm" class="form-control">
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="btn-group">
-                <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Save</label>
-
-                <label class="btn btn-danger" ng-model="checkModel.right" uib-btn-checkbox>Cancel</label>
+                <button class="btn btn-primary" ng-click="saveUser()" ng-hide="vm.user.id">Save</button>
+                <button class="btn btn-success" ng-click="saveUser()" ng-hide="!vm.user.id">Update</button>
+                <a class="btn btn-danger" ui-sref="users.list">Cancel</a>
             </div>
         </div>
     </div>
     <div class="table">
         <div class="table-cell">User:{{vm.user.name}} {{vm.user.surname}}</div>
+        <div class="table-cell">The Message: <button ng-click="vm.saveUser()">Evaluate</button></div>
     </div>
+</form>
 </section>

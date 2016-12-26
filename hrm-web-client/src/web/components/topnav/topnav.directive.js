@@ -26,15 +26,16 @@
     }
 
     // ----- ControllerFunction -----
-    ControllerFunction.$inject = [];
+    ControllerFunction.$inject = ['$state'];
 
     /* @ngInject */
-    function ControllerFunction() {
+    function ControllerFunction($state) {
         var vm = this;
         vm.isCollapsed = true;
+        window._state = $state;
 
-        vm.userMenuItems = [{uiSref: "user", text: "Add User"},
-            {uiSref: "userList", text: "User List"}];
+        vm.userMenuItems = [{uiSref: "users.list", text: "Users"},
+            {uiSref: "users.edit", text: "Edit User"}];
     }
 
 })();

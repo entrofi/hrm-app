@@ -24,11 +24,11 @@
                 </li>
                 <li>
                     <span uib-dropdown on-toggle="toggled(open)">
-                      <a ui-sref="userList" id="simple-dropdown"
+                      <a ui-sref="users.list" id="simple-dropdown"
                          uib-dropdown-toggle  ng-click="vm.isCollapsed = !vm.isCollapsed">Users</a>
                       <ul class="dropdown-menu">
                         <li ng-repeat="item in vm.userMenuItems">
-                         <a ui-sref="{{item.uiSref}}" >{{item.text}} {{item.uiSref}}</a>
+                         <a ui-sref="{{item.uiSref}}" >{{item.text}}</a>
                         </li>
                       </ul>
                     </span>

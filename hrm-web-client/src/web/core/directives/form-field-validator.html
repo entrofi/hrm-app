@@ -1,0 +1,15 @@
+<div class="form-group has-feedback">
+	<label class="control-label" data-localize="{{label}}">{{label}}</label>
+	<span ng-transclude></span>
+	<div >
+		<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<span class="help-block ent-required" ng-show="showMessage && ngInputCtrl.$error.required" data-localize="{{requiredMessage}}"></span>
+		<span class="help-block ent-msg" ng-show="showMessage &&  !ngInputCtrl.$error.required" data-localize="{{message}}"></span>
+		<span ng-show="debug" class="text-warning" style="font-size: 0.8em">
+			Form element status<br/>
+			Valid: {{ngInputCtrl.$valid}}<br/>
+			Error: {{ngInputCtrl.$error}}<br/>
+			Model: {{ngInputCtrl.$viewValue}}
+		</span>
+	</div>
+</div>

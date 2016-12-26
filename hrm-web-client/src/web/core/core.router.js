@@ -14,6 +14,10 @@
 
         $urlRouterProvider.otherwise('/');
 
+
+
+
+
         $stateProvider
             .state('dashboard', {
                 url: '/',
@@ -23,17 +27,35 @@
                 url: '/idea',
                 template: '<tmpl-ideaedit></tmpl-ideaedit>'
             })
-            .state('user', {
-                url: '/user',
-                templateUrl: 'components/user/useredit.html',
-                controller: 'UserEditController',
-                controllerAs: 'vm'
+            .state('users', {
+                url: "/users",
+                views: {
+                    'rootView@': {
+                        templateUrl: 'components/user/user.html',
+                        controller: 'UserListController',
+                        controllerAs: 'vm'
+                    }
+                }
             })
-            .state('userList', {
-                url: '/user/list',
-                templateUrl: 'components/user/userlist.html',
-                controller: 'UserListController',
-                controllerAs: 'vm'
+            .state('users.list', {
+                url: '/list',
+                views: {
+                    'rootView@': {
+                        templateUrl: 'components/user/userlist.html',
+                        controller: 'UserListController',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('users.edit', {
+                url: '/{id}',
+                views: {
+                    'rootView@' : {
+                        templateUrl: 'components/user/useredit.html',
+                        controller: 'UserEditController',
+                        controllerAs: 'vm'
+                    }
+                }
             });
     }
 })();
